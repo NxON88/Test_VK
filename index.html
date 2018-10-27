@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>vk</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+	<!-- <a href="https://oauth.vk.com/authorize?client_id=6076877&display=page&redirect_uri=&scope=likes+notifications+post+wall+friends+status&response_type=token&v=&state=">Для получения токенна перейдите по ссылке...</a> -->
+
+	<div id="block-user" class="container">
+		<div class="row">
+			
+			<div class="col-md-12">
+				<div class="list-group m-1">
+					<span class="list-group-item list-group-item-action list-group-item-primary d-flex flex-wrap align-content-center justify-content-between">
+						<span>Вконтакте</span>
+						<span id="close" class="btn btn-primary btn-sm">Выход</span>
+					</span>
+				</div>
+			</div>
+
+			<div class="col-md-5">
+
+				<div id="user"></div>
+
+			</div>
+			<div class="col-md-7">
+
+				<div id="frends" class="d-flex flex-wrap"></div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div id="authorization" class="container">
+		<div class="row">
+			
+			<div class="col-md-12">
+				<div class="list-group m-1">
+					<span class="list-group-item list-group-item-action list-group-item-danger">Авторизация</span>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="jumbotron m-1">
+					<h1 class="display-3">Здравствуйте!</h1>
+					<p class="lead">Для продолжения, пожалуйста, пройдите авторизацию.</p>
+					<hr class="my-2">
+					<p>Перейдите по <a href="https://oauth.vk.com/authorize?client_id=6076877&display=page&redirect_uri=&scope=likes+notifications+post+wall+friends+status&response_type=token&v=&state=" target="_blanck">ссылке</a>, скопируйте  ключь (от "=" до "&") и вставьте в поле ниже :</p>
+					<p class="my-2">
+						<input id="access-token" class="form-control" type="text" placeholder="Access Token">
+					</p>
+					<p class="lead">
+						<button id="start" class="btn btn-primary btn-lg" role="button">Авторизоваться</button>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+	<style type="text/css">
+		#frends img { width: 200px; height: 200px; object-fit: cover; }
+	</style>
+    <script src="App.js"></script>
+</body>
+
+</html>
